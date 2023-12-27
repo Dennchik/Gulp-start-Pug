@@ -1,0 +1,43 @@
+//* ------------------------------- [Variables] --------------------------------
+$minWidth: 320px;
+$maxWidth: 1920px;
+$maxWidthContainer: 1440px;
+//* ---------------------------- [Font Variables] ------------------------------
+$font-path: '../fonts';
+$font-family: 'Roboto', sans-serif;
+$font-family-secondary: 'Systemia Regular', sans-serif;
+$FontSize: 16px;
+$fontColor: #d1d1d1;
+$fontWeight: 300;
+// -----------------------------------------------------------------------------
+$bgColor: #0f1317;
+$borderColor: #4e4e4f;
+$borderGray: #e7e7e7;
+// -----------------------------------------------------------------------------
+$boxShadow: 10px 5px 5px #0d0808ee;
+$BlackShadow: #000;
+// -----------------------------------------------------------------------------
+$blue: #17e4ff;
+$brown: #584e4a;
+$orange: #f64e38;
+$darkcyan: darkcyan;
+$hover: #1ab9ce;
+$gray: #999;
+// -----------------------------------------------------------------------------
+$text-selection: #00546346;
+$text-color-selection: #9b9999;
+$scrollbar-thumb: #005463;
+$scrollbar-thumb-bgcolor: #4e4e4f;
+
+// -----------------------------------------------------------------------------
+:root {
+	--pos: left center;
+	--size: 0;
+	--inset-top: 0;
+	--inset-right: 100%;
+	--inset-bottom: 100%;
+	--inset-left: 0;
+}
+
+$snap: cubic-bezier(1, 0.005, 0.24, 1);
+$bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);

@@ -1,0 +1,26 @@
+extends ../layout/app
+block page 
+	include ../includes/mixins.pug
+	div(class="wrapper")#name
+		include ../chunk/header
+		main.main-content._container 
+			.main-content
+				._title
+					h1 Главная!!!
+
+				ul.list  
+					each item  in link
+						.items 
+							h3.item= item.name
+							p.text= item.body
+				//- +listItems
+
+				.menu-page
+					._title._trigger-click
+					._slide
+						img(alt="Изображение" src="img/lg_modland.jpg")
+					._slide.-active Content
+					._slide Content	
+						p._text Good weather
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur explicabo porro possimus quo sunt. Cumque dolores dolorum expedita illo modi numquam praesentium. Expedita facere nesciunt nisi, obcaecati quod	rerum sapiente!
+		include ../chunk/footer

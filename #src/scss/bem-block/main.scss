@@ -1,0 +1,30 @@
+.header {
+	margin-bottom: 2rem;
+	text-align: center;
+	font-family: 'Play', sans-serif;
+	font-size: 36px;
+	font-weight: 400;
+	border: 1px solid red;
+	text-align: center;
+}
+
+.main-content {
+	text-align: center;
+
+	h1 {
+		font-family: 'Play', sans-serif;
+		font-size: 36px;
+	}
+
+	img {
+		max-width: 100%;
+		object-fit: cover;
+	}
+}
+
+footer {
+	margin-top: 2rem;
+	text-align: center;
+	color: aqua;
+	font-size: 36px;
+}

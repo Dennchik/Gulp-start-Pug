@@ -1,0 +1,141 @@
+html,
+body {
+	font-style: normal;
+	font-size: 62.5%;
+	font-weight: $fontWeight;
+	font-family: $font-family;
+	height: 100%;
+	counter-reset: heading;
+	color: #fff;
+	background-color: $bgColor;
+	overflow-x: hidden;
+
+	// user-select: none;
+	@include _1024 {
+		font-size: 50%;
+	}
+}
+
+body {
+	font-size: $FontSize;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: 0 none;
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: 0;
+	border-radius: 0;
+	box-sizing: inherit;
+}
+
+img {
+	vertical-align: top;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: inherit;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	&:visited {
+		text-emphasis: none;
+		vertical-align: middle;
+	}
+}
+
+input,
+button,
+textarea {
+	border: none;
+}
+
+a:focus,
+a:active,
+input:focus,
+textarea:focus {
+	outline: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: $FontSize;
+	font-weight: inherit;
+	font-style: inherit;
+}
+
+//  * Изменить стиль выделения текста
+::selection {
+	color: $text-color-selection;
+	background-color: $text-selection;
+	text-shadow: 0 1px 0 #000;
+}
+
+::-moz-selection {
+	color: $text-color-selection;
+	background-color: $text-selection;
+	text-shadow: 0 1px 0 #000;
+}
+
+// * Изменить стиль полосы прокрутки (scrollbar)
+::-webkit-scrollbar {
+	width: 0.9rem;
+	padding: 0.031em;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	border: 1px solid $borderColor;
+	border-radius: 2px;
+	background-color: $scrollbar-thumb;
+	background-image: -webkit-linear-gradient(
+		45deg,
+		$bgColor 25%,
+		transparent 25%,
+		transparent 50%,
+		$bgColor 50%,
+		$bgColor 75%,
+		transparent 75%,
+		transparent
+	);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: $bgColor;
+	background-image: -webkit-linear-gradient(
+		45deg,
+		$scrollbar-thumb 25%,
+		transparent 25%,
+		transparent 50%,
+		$scrollbar-thumb 50%,
+		$scrollbar-thumb 75%,
+		transparent 75%,
+		transparent
+	);
+}
