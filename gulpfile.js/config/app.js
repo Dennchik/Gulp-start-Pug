@@ -10,6 +10,10 @@ module.exports = {
 
 	webpack: {
 		mode: isProd ? 'production' : 'development',
+		entry: {
+			main: './#src/js/main.js',
+			app: './#src/js/app.js'
+		},
 	},
 	pug: {
 		pretty: isDev,
