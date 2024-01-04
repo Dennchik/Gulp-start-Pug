@@ -9,7 +9,8 @@
 		"(2) Production": "gulp --production",
 		"(3) (Public)": "gulp final",
 		"(4) (JADE)": "gulp pug",
-		"(4) (JSON)": "gulp json",
+		"(5) (JSON)": "gulp json",
+		"(6) (SVG)": "gulp svg",
 		"TASKS": "gulp --tasks"
 	},
 	"author": "Dennchik",
@@ -63,6 +64,7 @@
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-strip-comments": "^2.5.2",
 		"gulp-strip-css-comments": "^2.0.0",
+		"gulp-svg-sprite": "^2.0.3",
 		"gulp-ttf2woff2": "^4.0.1",
 		"gulp-uglify": "^3.0.2",
 		"gulp-webp": "^4.0.1",

@@ -9,7 +9,7 @@ const js = () => {
 		}))
 		.pipe($.gul.fileInclude())
 		// .pipe($.gul.babel())
-		// .pipe($.webpack($.app.webpack))
+		.pipe($.webpack($.app.webpack))
 		.pipe($.gulpIf($.app.isDev, $.gul.sourcemaps.init({
 			largeFile: true
 		})))

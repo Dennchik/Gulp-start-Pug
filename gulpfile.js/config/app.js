@@ -12,7 +12,8 @@ module.exports = {
 		mode: isProd ? 'production' : 'development',
 		entry: {
 			main: './#src/js/main.js',
-			app: './#src/js/app.js'
+			app: './#src/js/app.js',
+			svgbody: './#src/js/module/svgbody.js'
 		},
 	},
 	pug: {
@@ -22,23 +23,59 @@ module.exports = {
 		// 	link: require('../../#src/temp/data.json')
 		// }
 	},
+
 	htmlMin: {
 		collapseWhitespace: isProd,
 	},
+
 	js: {
 		ext: {
 			src: '.js',
 			min: '.min.js'
 		}
 	},
+
 	renameScss: {
 		extname: '.css',
 		suffix: '.min',
 	},
+
+	svg: {
+		shape: {
+			dimension: { // Set maximum dimensions
+				maxWidth: 32,
+				maxHeight: 32
+			},
+			spacing: { // Add padding
+				padding: 0
+			},
+			dest: 'intermediate-svg' // Keep the intermediate files
+		},
+		mode: {
+			// view: { // Activate the «view» mode
+			// 	bust: false,
+			// 	render: {
+			// 		scss: true // Activate Sass output (with default options)
+			// 	}
+			// }, symbol: true
+			symbol: {
+				dest: 'simbol-svg',
+				sprite: 'sprite.svg',
+				render: {
+					scss: {
+						dest: '../../#src/scss/core/_sprite.scss',
+						// 	template: assetsDir + "sass/templates/_sprite_template.scss"
+					}
+				}
+			}
+		}
+	},
+
 	fonter: {
 		// formats: ['woff', 'ttf', 'eot', 'svg', 'otf'],
 		formats: ['woff', 'ttf', 'svg', 'otf'],
 	},
+
 	autoprefixer: {
 		cascade: false,
 		grid: 'auto-place',
@@ -50,6 +87,7 @@ module.exports = {
 			// 'Opera >= 12',
 		],
 	},
+
 	imagemin: {
 		verbose: true,
 		interlaced: true,
