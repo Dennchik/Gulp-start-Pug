@@ -4,7 +4,7 @@ global.$ = {
 	gul: require('gulp-load-plugins')(),
 	browserSync: require('browser-sync').create(),
 	sass: require('gulp-sass')(require('sass')),
-	svgSprite: require('gulp-svg-sprite'),
+	// svgSprite: require('gulp-svg-sprite'),
 	webpack: require('webpack-stream'),
 	gulpIf: require('gulp-if'),
 	del: require('del'),

@@ -13,7 +13,7 @@ module.exports = {
 		entry: {
 			main: './#src/js/main.js',
 			app: './#src/js/app.js',
-			svgbody: './#src/js/module/svgbody.js'
+			svgbody: './#src/js/module/svg4everybody.js'
 		},
 	},
 	pug: {
@@ -40,35 +40,69 @@ module.exports = {
 		suffix: '.min',
 	},
 
+	svgMin: {
+		js2svg: {
+			pretty: true
+		}
+	},
+
 	svg: {
 		shape: {
-			dimension: { // Set maximum dimensions
+			id: {
+				preview: false,
+				generator: "icon-%s",
+				separator: '-'
+			},
+
+			dimension: {
 				maxWidth: 32,
 				maxHeight: 32
 			},
-			spacing: { // Add padding
-				padding: 0
+			spacing: {
+				padding: 0,
+				box: 'content'
 			},
+
 			dest: 'intermediate-svg' // Keep the intermediate files
 		},
+		// transform: [{
+		// 	svgo: {
+		// 		plugins: [{
+		// 			addAttributesToSVGElement: {
+		// 				attribute: "mySvg"
+		// 			},
+
+		// 			name: 'preset-default',
+		// 			params: {
+		// 				removeViewBox: false,
+		// 				removeUnusedNS: false,
+		// 				removeUselessStrokeAndFill: true,
+		// 				cleanupIDs: false,
+		// 				removeComments: true,
+		// 				removeEmptyAttrs: true,
+		// 				removeEmptyText: true,
+		// 				collapseGroups: true,
+		// 				removeAttrs: { attrs: '(fill|stroke|style)' },
+		// 			}
+
+		// 		}
+		// 		]
+		// 	}
+		// }],
+
 		mode: {
-			// view: { // Activate the «view» mode
-			// 	bust: false,
-			// 	render: {
-			// 		scss: true // Activate Sass output (with default options)
-			// 	}
-			// }, symbol: true
-			symbol: {
-				dest: 'simbol-svg',
-				sprite: 'sprite.svg',
-				render: {
-					scss: {
-						dest: '../../#src/scss/core/_sprite.scss',
-						// 	template: assetsDir + "sass/templates/_sprite_template.scss"
-					}
-				}
+			stack: {
+				dest: './svg',
+				sprite: './sprite.svg',
+				example: true
+				// render: {
+				// 	scss: {
+				// 		dest: '../../../#src/scss/core/_sprite.scss',
+				// 		template: "sprite-template.scss"
+				// 	}
+				// }
 			}
-		}
+		},
 	},
 
 	fonter: {

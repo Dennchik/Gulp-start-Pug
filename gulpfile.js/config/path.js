@@ -1,7 +1,7 @@
 const pathSrc = './#src';
 const pathDest = './build';
 const pathEnd = './public';
-
+const svgSprite = require('gulp-svg-sprite');
 
 module.exports = {
 	root: pathDest,
