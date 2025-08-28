@@ -3,14 +3,16 @@
 	"version": "1.1.E",
 	"description": "Сборка Gulp",
 	"main": "index.js",
-	"tipe": "module",
 	"scripts": {
 		"(1) Development": "gulp",
 		"(2) Production": "gulp --production",
 		"(3) (Public)": "gulp final",
 		"(4) (JADE)": "gulp pug",
 		"(5) (JSON)": "gulp json",
-		"(6) (SVG)": "gulp svg",
+		"(6) (SCSS)": "gulp scss",
+		"(7) (JScrript)": "gulp js",
+		"(8) (SVG)": "gulp svg",
+		"RESET": "gulp clear",
 		"TASKS": "gulp --tasks"
 	},
 	"author": "Dennchik",
@@ -28,13 +30,14 @@
 		]
 	},
 	"devDependencies": {
-		"@babel/core": "^7.23.2",
-		"@babel/preset-env": "^7.23.2",
-		"@types/jest": "^29.5.11",
-		"browser-sync": "^2.27.10",
-		"eslint-config-prettier": "^8.5.0",
-		"gulp": "^4.0.2",
-		"gulp-autoprefixer": "^8.0.0",
+		"@babel/core": "^7.25.8",
+		"@babel/preset-env": "^7.25.8",
+		"@babel/register": "^7.25.7",
+		"@types/jest": "^29.5.13",
+		"browser-sync": "^3.0.3",
+		"del": "^6.1.1",
+		"eslint-config-prettier": "^9.1.0",
+		"gulp": "^5.0.0",
 		"gulp-babel": "^8.0.0",
 		"gulp-cheerio": "^1.0.0",
 		"gulp-concat": "^2.6.1",
@@ -85,7 +88,7 @@
 	},
 	"dependencies": {
 		"D": "^1.0.0",
-		"del": "^6.1.1",
+		"gulp-autoprefixer": "^9.0.0",
 		"gulp-cli": "^2.3.0",
 		"postcss": "^8.4.32"
 	}

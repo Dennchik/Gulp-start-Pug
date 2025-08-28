@@ -1,0 +1,26 @@
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(name="description" content="Краткое описание документа.")
+		meta(name="keywords" content="keywords-ключевые слова для поиска")
+		meta(name="viewport", content="width=device-width,initial-scale=1")
+
+		link(rel="icon" href="img/icons/gulp_logo.png" type="image/icon")
+		link(href="css/modal.min.css" rel="stylesheet" type="text/css") 
+		script(defer="defer" type="text/javascript" src="js/modal.min.js")
+		title Gulp-Stary-PUG
+
+body 
+	h2 Image Modal
+	p In this example, we use CSS to create a modal (dialog box) that is hidden by default.
+	p We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. Also note that we use the value from the image's "alt" attribute as an image caption text inside the modal.
+	img#myImg.image(src="../img/img_snow.jpg", alt="Snow", style="width:100%;max-width:300px")
+
+	img#myImg.image(src="../img/cover.jpg", alt="Snow", style="width:100%;max-width:300px")
+	//-  The Modal 
+	#myModal.modal
+		span.close ×
+		img._image(src="#", alt="Snow").modal-content#img01
+		//- #caption

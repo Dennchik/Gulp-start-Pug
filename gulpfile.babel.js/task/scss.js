@@ -1,5 +1,5 @@
-//* JavaScript Processing
-const scss = () => {
+//* JavaScript Processing 
+const scss = async () => {
 	return $.gulp.src($.path.scss.src)
 		.pipe($.gul.plumber({
 			errorHandler: $.gul.notify.onError(error => ({
@@ -15,7 +15,8 @@ const scss = () => {
 			outputStyle: 'expanded',
 		}).on('error', $.gul.notify.onError()))
 		.pipe($.gulpIf($.app.isProd, $.gul.stripCssComments()))
-		.pipe($.gulpIf($.app.isProd, $.gul.autoprefixer($.app.autoprefixer)))
+		// .pipe($.gul.autoprefixer())
+		// .pipe($.gulpIf($.app.isProd, $.gul.autoprefixer($.app.autoprefixer)))
 		.pipe($.gulpIf($.app.isProd, $.gul.debug({ title: '(Autoprefixer)' })))
 		.pipe($.gulpIf($.app.isProd, $.gul.groupCssMediaQueries()))
 		.pipe($.gulpIf($.app.isProd, $.gul.shorthand()))
